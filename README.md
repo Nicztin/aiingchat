@@ -1,78 +1,61 @@
-# Hello, I'm Nicztin! 👋
-![image](https://github.com/user-attachments/assets/15703d4e-9fa5-4a60-b53d-4d1ecc13640c)
+<a href="https://chat.vercel.ai/">
+  <img alt="Next.js 14 and App Router-ready AI chatbot." src="app/(chat)/opengraph-image.png">
+  <h1 align="center">Next.js AI Chatbot</h1>
+</a>
 
-Welcome to my GitHub profile! I’m a passionate developer who loves building innovative and impactful solutions using technology. My expertise spans web development, cloud computing, and open-source contributions, and I’m always eager to learn and collaborate on exciting projects. Here's a little bit about me:
+<p align="center">
+  An Open-Source AI Chatbot Template Built With Next.js and the AI SDK by Vercel.
+</p>
 
-## 🚀 Technologies & Skills 🚀
+<p align="center">
+  <a href="#features"><strong>Features</strong></a> ·
+  <a href="#model-providers"><strong>Model Providers</strong></a> ·
+  <a href="#deploy-your-own"><strong>Deploy Your Own</strong></a> ·
+  <a href="#running-locally"><strong>Running locally</strong></a>
+</p>
+<br/>
 
-- 🔭 I’m currently working on various open-source projects.
-- 🌱 I’m currently learning advanced web development and cloud technologies.
-- 👯 I’m looking to collaborate on exciting and innovative projects.
-- 💬 Ask me about anything related to web development, cloud computing, and open-source contributions.
-- 😄 Pronouns: He/Him
-- ⚡ Fun fact: I love hiking and exploring new places!
-- 💻 Languages: JavaScript, TypeScript, Python, Java, C++
-- 🌐 Frontend: React, Angular, HTML, CSS
-- 🛠️ Backend: Node.js, GraphQL, REST APIs
-- 📱 Mobile: React Native, Flutter
-- ☁️ Cloud & DevOps: AWS, Azure, Google Cloud, Docker, Kubernetes, CI/CD
-  
-## 📝 Description
+## Features
 
-Welcome to my GitHub profile repository! This repository showcases my work, projects, and contributions across various domains, including web development, cloud computing, and open-source software. Here, you will find information about my current projects, technologies I use, and how to get in touch with me.
+- [Next.js](https://nextjs.org) App Router
+  - Advanced routing for seamless navigation and performance
+  - React Server Components (RSCs) and Server Actions for server-side rendering and increased performance
+- [AI SDK](https://sdk.vercel.ai/docs)
+  - Unified API for generating text, structured objects, and tool calls with LLMs
+  - Hooks for building dynamic chat and generative user interfaces
+  - Supports OpenAI (default), Anthropic, Cohere, and other model providers
+- [shadcn/ui](https://ui.shadcn.com)
+  - Styling with [Tailwind CSS](https://tailwindcss.com)
+  - Component primitives from [Radix UI](https://radix-ui.com) for accessibility and flexibility
+- Data Persistence
+  - [Vercel Postgres powered by Neon](https://vercel.com/storage/postgres) for saving chat history and user data
+  - [Vercel Blob](https://vercel.com/storage/blob) for efficient file storage
+- [NextAuth.js](https://github.com/nextauthjs/next-auth)
+  - Simple and secure authentication
 
-Feel free to explore my repositories and reach out if you have any questions or want to collaborate on exciting projects. Happy coding! 😊
+## Model Providers
 
-## 🛠️ Technologies & Tools
+This template ships with OpenAI `gpt-4o` as the default. However, with the [AI SDK](https://sdk.vercel.ai/docs), you can switch LLM providers to [OpenAI](https://openai.com), [Anthropic](https://anthropic.com), [Cohere](https://cohere.com/), and [many more](https://sdk.vercel.ai/providers/ai-sdk-providers) with just a few lines of code.
 
-- **Languages:** JavaScript, TypeScript, Python, Java, C++
-- **Web Development:** HTML, CSS, React, Angular, Node.js
-- **Mobile Development:** React Native, Flutter
-- **Database:** MySQL, PostgreSQL, MongoDB
-- **Cloud:** AWS, Azure, Google Cloud
-- **DevOps:** Docker, Kubernetes, Jenkins, GitHub Actions
-- **Others:** GraphQL, REST APIs, CI/CD, Agile Methodologies
+## Deploy Your Own
 
-## 📈 GitHub Stats
+You can deploy your own version of the Next.js AI Chatbot to Vercel with one click:
 
-![Nicztin's GitHub stats](https://github-readme-stats.vercel.app/api?username=Nicztin&show_icons=true&theme=radical)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fai-chatbot&env=AUTH_SECRET,OPENAI_API_KEY&envDescription=Learn%20more%20about%20how%20to%20get%20the%20API%20Keys%20for%20the%20application&envLink=https%3A%2F%2Fgithub.com%2Fvercel%2Fai-chatbot%2Fblob%2Fmain%2F.env.example&demo-title=AI%20Chatbot&demo-description=An%20Open-Source%20AI%20Chatbot%20Template%20Built%20With%20Next.js%20and%20the%20AI%20SDK%20by%20Vercel.&demo-url=https%3A%2F%2Fchat.vercel.ai&stores=[{%22type%22:%22postgres%22},{%22type%22:%22blob%22}])
 
-## 💡 What I Do
+## Running locally
 
-- 🔹 Open-Source Development – Contributing to and maintaining open-source projects.
-- 🔹 Web & Mobile Development – Building scalable and responsive applications.
-- 🔹 Cloud Computing – Deploying and optimizing cloud-based solutions.
-- 🔹 Collaboration – Always open to working on innovative projects with like-minded developers.
+You will need to use the environment variables [defined in `.env.example`](.env.example) to run Next.js AI Chatbot. It's recommended you use [Vercel Environment Variables](https://vercel.com/docs/projects/environment-variables) for this, but a `.env` file is all that is necessary.
 
-## 📫 Connect with Me
+> Note: You should not commit your `.env` file or it will expose secrets that will allow others to control access to your various OpenAI and authentication provider accounts.
 
-- 📩 Email: [nicztin@gmail.com]
-- [Telegram](https://t.me/neattenwatch)
-- [YouTube](https://youtube.com/@nicztining?si=Jg_THNiyXvnzv25-)
-- [Instagram](https://t.me/neattenwatch)
-  
-## 🌟 Featured Projects
+1. Install Vercel CLI: `npm i -g vercel`
+2. Link local instance with Vercel and GitHub accounts (creates `.vercel` directory): `vercel link`
+3. Download your environment variables: `vercel env pull`
 
-- [Internet of Things](https://github.com/w3c/wot-thing-description) - The Internet of Things (IoT) refers to the network of physical devices, vehicles, buildings, and other objects embedded with sensors, software, and network connectivity, enabling them to collect and exchange data. This technology allows objects to be sensed and controlled remotely across existing network infrastructure, creating opportunities for more direct integration between the physical world and computer-based systems, resulting in improved efficiency, accuracy, and economic benefit.
-- Key components of IoT include:
+```bash
+pnpm install
+pnpm dev
+```
 
-Devices: Physical objects embedded with sensors, actuators, and communication hardware.
-Connectivity: Communication networks that enable data exchange between devices and centralized systems.
-Data Processing: Analyzing and processing the collected data to derive actionable insights.
-User Interface: Applications and dashboards that allow users to interact with and control IoT devices.
-Popular applications of IoT include smart homes, wearable devices, connected cars, smart cities, industrial IoT, and healthcare.
-
-- [Introducing deep research](https://github.com/copilot/) - An agent that uses reasoning to synthesize large amounts of online information and complete multi-step research tasks for you. Available to Pro users today, Plus and Team next.
-- [Sustainable Technology](https://github.com/protontypes/open-sustainable-technology) - Sustainable Technology is a pivotal trend as organizations increasingly prioritize eco-friendly innovations to combat climate change and minimize environmental impact. This trend encompasses developing and using technologies that reduce energy consumption, lower carbon emissions, and promote circular economy practices. From data centers powered by renewable energy and energy-efficient devices to AI-driven solutions that optimize resource use, sustainable technology redefines how businesses operate with a focus on long-term ecological balance.
-
-The push for sustainable technology is driven by growing consumer awareness, stricter regulatory mandates, and the need for businesses to demonstrate corporate social responsibility. Companies are leveraging IoT, AI, and blockchain advances to enhance sustainability in supply chains, waste management, and energy grids. In 2025 and beyond, the adoption of sustainable technology will be a marker of environmental commitment and a competitive advantage, as organizations that embrace these innovations position themselves as forward-thinking leaders in a market increasingly sensitive to ecological impact.
-- [Generative AI](https://github.com/GoogleCloudPlatform/generative-ai/tree/main/gemini) - Starting the list of new technology trends with the talk of the town, gen-AI! Generative AI is set to dominate as a key technology trend in 2025, reshaping industries through its ability to create highly sophisticated and human-like content, from text and images to audio and complex simulations. Advancements in generative models, like GPTs and multimodal systems, are driving new applications in content creation, design automation, and interactive experiences.
-
-This technology is not only enhancing productivity but also revolutionizing how businesses approach problem-solving, customer engagement, and creative processes, making tools more accessible and versatile across various sectors. Organizations will continue integrating generative AI into workflows to innovate faster and provide personalized services at scale.
-Thank you for visiting my profile! Feel free to explore my repositories and get in touch if you'd like to collaborate on anything interesting.
-
-Updated on: 2025-02-24 14:44:59 (UTC)
-
-## 🌍 How to reach me: [Nicztining](https://spyandmonitor.com/)
-
-Happy coding! 😊
+Your app template should now be running on [localhost:3000](http://localhost:3000/).
